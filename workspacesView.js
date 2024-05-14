@@ -101,9 +101,7 @@ var SecondaryMonitorDisplayOverride = {
         const { scaleFactor } = St.ThemeContext.get_for_stage(global.stage);
 
         const newWidth = width - this._thumbnails.width * ( scaleFactor > 1 ? scaleFactor : 2);
-        const newXOrigin = global.vertical_overview.workspace_picker_left
-              ? this._thumbnails.x + this._thumbnails.width + spacing * 2
-              : this._thumbnails.x - newWidth - spacing * 2;
+        const newXOrigin = this._thumbnails.x + this._thumbnails.width + spacing * 2;
 
         switch (state) {
             case ControlsState.HIDDEN:
